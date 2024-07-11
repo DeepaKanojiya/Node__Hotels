@@ -1,9 +1,12 @@
 const mongoose = require("mongoose")
+require('dotenv').config();
 
-
+const mongoURL = process.env.MONGODB_URL;
+// const mongoURL  = process.env.MONGODBURL_LOCAL;
 async function main(){
-  await mongoose.connect("mongodb://localhost:27017/hotels");
-}
+
+await mongoose.connect(mongoURL);
+ }
 main()
 .then(()=>{
   console.log("connected mongodb server")
