@@ -10,7 +10,7 @@ const bodyParser = require("body-parser")
 
 app.use(bodyParser.json());//req.body
 
-const PORT = process.env.PORT || 7070;
+const PORT = process.env.PORT || 3000;
 
 app.get('/',(req,res)=>{
   res.send("welcome to my hotel");
@@ -24,5 +24,5 @@ app.use('/menu',menuItemRoutes);
 
 
 app.listen(PORT , ()=>{
-  console.log("port is working on 7070")
+  console.log("port is working on 3000")
 })
